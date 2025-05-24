@@ -1,0 +1,26 @@
+.shortlisted-btn{
+    background-color: white;
+    border: 0;
+    position: relative;
+    left: 168px;
+}
+#threedots{
+    position: relative;
+    left: 160px;
+}
+#emptycup{
+    position: relative;
+    left: 80px;
+}
+#sort{
+    position: relative;
+    left: 174px;
+}
+#map{
+    position: relative;
+    left: 50px;
+}
+#gallery{
+    position: relative;
+    left: 20px;
+}

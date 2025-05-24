@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<title>Index</title>
+{% endblock %}
+
+{% block body %}
+
+{% for card in cards %}
+<div class="{% if loop.index0 % 2 == 0 %}evencard{% else %}oddcard{% endif %}" data-id="{{card._id}}">
+    <div class="card-left">
+      <h2 class="title">{{ card.name }}</h2>
+      <div class="rating">
+        ★★★★☆
+      </div>
+      <p class="description">
+        Passionate team of 4 designers working out of Bangalore with an experience of 4 years.
+      </p>
+      <div class="info">
+        <div><strong>{{ card.projects or 57 }}</strong><br>Projects</div>
+        <div><strong>{{ card.years or 4 }}</strong><br>Years</div>
+        <div><strong>{{ card.price or '$$' }}</strong><br>Price</div>
+      </div>
+      <div class="contacts">
+        <p>{{ card.phone1 or '+91 - 984532853' }}</p>
+        <p>{{ card.phone2 or '+91 - 984532854' }}</p>
+      </div>
+    </div>
+    <div class="card-right">
+      <button class="action">➡️<br><span>Details</span></button>
+      <button class="action">🙈<br><span>Hide</span></button>
+      <button class="action" onclick="updateCard('{{card._id}}')">📌<br><span>Shortlist</span></button>
+      <button class="action report">⚠️<br><span>Report</span></button>
+    </div>
+</div>
+{% endfor %}
+
+
+
+
+
+<script>
+function updateCard(id) {
+  fetch(`/update-card/${id}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      "shortlisted": "True"  // Example field to update
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert("Card updated: " + data.message);
+  })
+  .catch(err => {
+    console.error("Error:", err);
+  });
+}
+</script>
+
+{% endblock %}

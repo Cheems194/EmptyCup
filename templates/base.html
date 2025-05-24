@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/base.css">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div id="header">
+        <img src="../static/images/logo-small 1.png" alt="logo" height="31px" width="31px" id="logo">
+        <img src="../static/images/EmptyCup (1).png" width="124px" id="emptycup">
+        <img src="../static/images/three-dots-vertical 1.png" width="27px" id="threedots">
+    </div>
+    <img src="../static/images/Line 1.png" width="360px">
+    <div>
+        <img src="../static/images/Group 6.png" id="contacts">
+        <img src="../static/images/Group 7.png" id="gallery">      
+        <img src="../static/images/Group 8.png" id="map">  
+        <button onclick="shortlisted()" class="shortlisted-btn"><img src="../static/images/Group 10.png"></button>
+        <img src="../static/images/Group 9.png" id="sort">
+    </div>
+    <br>
+
+
+
+    {% block body %}{% endblock %}
+
+<script>
+    function shortlisted(){
+        window.location.href = "/shortlisted";
+    }
+</script>
+</body>
+</html>
