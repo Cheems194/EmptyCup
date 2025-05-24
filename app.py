@@ -2,13 +2,13 @@ from flask import Flask, render_template, request, jsonify
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import os
+from data.seed_designer_cards import seed_designer_cards
 
 app = Flask(__name__)
 app.config["MONGO_URI"] = os.getenv("MONGO_URI", "mongodb://localhost:27017/EmptyCup")
-db = PyMongo(app).db
+db = PyMongo(app)
 
 try:
-    from data.seed_designer_cards import seed_designer_cards
     if db.DesignerCards.count_documents({}) == 0:
         seed_designer_cards(db)
 except Exception as e:
