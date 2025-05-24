@@ -6,7 +6,9 @@ from data.seed_designer_cards import seed_designer_cards
 
 app = Flask(__name__)
 app.config["MONGO_URI"] = os.getenv("MONGO_URI", "mongodb://localhost:27017/EmptyCup")
-db = PyMongo(app)
+mongo = PyMongo(app)
+db = mongo.db
+
 
 try:
     if db is None:
