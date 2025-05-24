@@ -6,6 +6,15 @@ app=Flask(__name__)
 app.config["MONGO_URI"]="mongodb://localhost:27017/EmptyCup"
 db=PyMongo(app).db
 
+def create_app():
+    app = Flask(__name__)
+    
+    # DB and other setup
+    from data.seed_designer_cards import seed_designer_cards
+    seed_designer_cards()
+
+    return app
+
 @app.route("/")
 def index():
     cards=db.DesignerCards.find({})
@@ -34,4 +43,4 @@ def update_card(id):
 
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0',port=5000)

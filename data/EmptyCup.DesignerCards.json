@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "6830eecba69c068fa237af29"
+  },
+  "name": "Epic Designs",
+  "description": "Passionate team of 4 designers working out of Bangalore with an experience of 4 years.",
+  "projects": 57,
+  "years": 8,
+  "price": "$$",
+  "phone1": "+91 - 984532853",
+  "phone2": "+91 - 984532854",
+  "shortlisted": "True"
+},
+{
+  "_id": {
+    "$oid": "6830ef4ca69c068fa237af2a"
+  },
+  "name": "Studio - D3",
+  "description": "Passionate team of 4 designers working out of Bangalore with an experience of 4 years.",
+  "projects": 43,
+  "years": 6,
+  "price": "$$$",
+  "phone1": "+91 - 984532853",
+  "phone2": "+91 - 984532854",
+  "shortlisted": "True"
+},
+{
+  "_id": {
+    "$oid": "68311e6ba69c068fa237af2c"
+  },
+  "name": "Epic Designs",
+  "description": "Passionate team of 4 designers working out of Bangalore with an experience of 4 years.",
+  "projects": 24,
+  "years": 9,
+  "price": "$$",
+  "phone1": "+91 - 984532853",
+  "phone2": "+91 - 984532854",
+  "shortlisted": "False"
+},
+{
+  "_id": {
+    "$oid": "68311e99a69c068fa237af2d"
+  },
+  "name": "Epic Designs",
+  "description": "Passionate team of 4 designers working out of Bangalore with an experience of 4 years.",
+  "projects": 7,
+  "years": 2,
+  "price": "$",
+  "phone1": "+91 - 984532853",
+  "phone2": "+91 - 984532854",
+  "shortlisted": "False"
+},
+{
+  "_id": {
+    "$oid": "68311ec4a69c068fa237af2e"
+  },
+  "name": "Epic Designs",
+  "description": "Passionate team of 4 designers working out of Bangalore with an experience of 4 years.",
+  "projects": 65,
+  "years": 11,
+  "price": "$$$",
+  "phone1": "+91 - 984532853",
+  "phone2": "+91 - 984532854",
+  "shortlisted": "False"
+}]
