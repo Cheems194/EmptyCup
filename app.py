@@ -9,8 +9,12 @@ app.config["MONGO_URI"] = os.getenv("MONGO_URI", "mongodb://localhost:27017/Empt
 db = PyMongo(app)
 
 try:
-    if db.DesignerCards.count_documents({}) == 0:
-        seed_designer_cards(db)
+    if db is None:
+        print("❌ Database connection failed.")
+    else:
+        if db.DesignerCards.count_documents({}) == 0:
+            seed_designer_cards(db)
+
 except Exception as e:
     print("Seeding skipped or failed:", str(e))
 
